@@ -1,0 +1,24 @@
+{
+  "name": "designaction",
+  "version": "1.4.5",
+  "homepage": "https://github.com/roots/bedrock",
+  "authors": [
+    "Dimas Satrio <dimassrio@outlook.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.5.2",
+    "font-awesome": "fontawesome#~4.4.0"
+  }
+}
