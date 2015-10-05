@@ -90,7 +90,8 @@ get_header(); ?>
 	<div id="social-section">
 		<div class="row">
 			<div class="large-8 columns">
-				<h6 class="line">REGISTER NOW</h6>	
+				<h6 class="line">REGISTER NOW</h6>
+				<?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 5 ); } ?>
 			</div>
 			<div class="large-4 columns">
 				<h6 class="line">TWEET UPDATES</h6>
