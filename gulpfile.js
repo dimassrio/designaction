@@ -9,8 +9,8 @@ var gulp = require('gulp');
 gulp.task('sass', function(){
 	return gulp.src('assets/sass/style.scss')
 	.pipe(sourcemaps.init())
-	.pipe(sass())
-	.pipe(sourcemaps.write())
+	.pipe(sass({outputStyle: 'compressed'}))
+	.pipe(sourcemaps.write('.'))
 	.pipe(gulp.dest('.'))
 	.pipe(browserSync.stream())
 	.pipe(notify('sass complete'));

@@ -107,11 +107,7 @@ get_header(); ?>
 				SPONSOR
 			</h6>
 			<ul class="small-block-grid-5">
-			<?php foreach(sponsorship_data() as $x): ?>
-					<li>
-						<a href="<?php echo $x->url; ?>"><img data-src="<?php echo $x->image; ?>" alt=""></a>
-					</li>
-			<?php endforeach; ?>
+			
 			</ul>
 		</div>
 		<div class="large-6 columns">
@@ -119,11 +115,7 @@ get_header(); ?>
 			 	MEDIA PARTNERS
 			 </h6>
 			 <ul class="small-block-grid-5">
-			 <?php foreach(media_data() as $x): ?>
-					<li>
-						<a href="<?php echo $x->url; ?>"><img data-src="<?php echo $x->image; ?>" alt=""></a>
-					</li>
-			<?php endforeach; ?>
+			 
 			</ul>
 		</div>
 	</div>
