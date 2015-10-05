@@ -11,9 +11,7 @@ get_header(); ?>
 
 <div id="main-slider" class="row collapse">
 	<div class="large-6 columns">
-		<?php 
-    		echo do_shortcode("[metaslider id=9]"); 
-		?>	
+		<?php if ( function_exists( 'soliloquy' ) ) { soliloquy( 'frontpage', 'slug' ); } ?>
 	</div>
 	<div class="large-6 columns">
 		<div class="button-slider-container">

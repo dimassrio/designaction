@@ -29,6 +29,7 @@ if( ! function_exists('sponsorship_data')) :
 				array_push($results, $result);
 			}
 		endif;
+
 		return $results;
 	}
 	
@@ -228,6 +229,46 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+/**
+ * Filter the shortcode attributes.
+ * If the ID parameter is not an integer, assume it is a slug.
+ * Convert the slug to an ID and return the attributes.
+ */
+function metaslider_shortcode_slug( $atts ) {
+
+	if ( isset( $atts['id'] ) && ! is_int( $atts['id'] ) ) {
+
+        $slider = get_page_by_path( $atts['id'], OBJECT, 'ml-slider' );
+
+        if ( $slider ) {
+            $atts['id'] = $slider->ID;
+        }
+
+	}
+
+	return $atts;
+
+}
+add_filter('shortcode_atts_metaslider', 'metaslider_shortcode_slug', 10, 3);
+
+/**
+ * Ensure the post_name (slug) is updated when a slideshow title
+ * is updated.
+ */
+function metaslider_update_slug_on_save( $data , $postarr ) {
+
+	if ( isset( $postarr['post_type'] ) && $postarr['post_type'] == 'ml-slider' ) {
+
+	    $data[ 'post_name' ] = sanitize_title( $postarr[ 'post_title' ] );
+
+	}
+
+	return $data;
+
+}
+add_filter( 'wp_insert_post_data' , 'metaslider_update_slug_on_save' , 10, 2 );
+
+
 class da_walker extends Walker_Nav_Menu {
   
 // add classes to ul sub-menus
@@ -274,15 +315,19 @@ function start_lvl( &$output, $depth = 0, $args = array() ) {
     $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
     $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
     $attributes .= ' class="menu-link ' . ( $depth > 0 ? 'sub-menu-link' : 'main-menu-link' ) . '"';
-  
-    $item_output = sprintf( '%1$s<a%2$s>%3$s%4$s%5$s</a>%6$s',
+
+    if(is_array($args)){
+    	$item_output = "";    		
+    }else{
+    	$item_output = sprintf( '%1$s<a%2$s>%3$s%4$s%5$s</a>%6$s',
         $args->before,
         $attributes,
         $args->link_before,
         apply_filters( 'the_title', $item->title, $item->ID ),
         $args->link_after,
         $args->after
-    );
+        );
+    }
   
     // build html
     $output .= apply_filters( 'da_walker_start_el', $item_output, $item, $depth, $args );
