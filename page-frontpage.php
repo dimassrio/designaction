@@ -17,7 +17,7 @@ get_header(); ?>
 		<div class="button-slider-container">
 			<section id="section-pre-event">
 				<h6 class="line">PRE-EVENT <span class="right"><i class="fa fa-calendar-o"></i></span></h6>
-				<p>View Pra-Event Schedule</p>
+				<p>View Pre-Event Schedule</p>
 			</section>
 			<section id="section-main-event">
 				<h6 class="line">MAIN EVENT <span class="right"><i class="fa fa-calendar-o"></i></span></h6>
@@ -62,7 +62,7 @@ get_header(); ?>
 				<h6 class="line">SPEAKERS</h6>
 				<ul class="small-block-grid-4">
 					<?php 
-					$query = new WP_Query('tag=speakers');
+					$query = new WP_Query('tag=speakers&order=ASC');
 					while ( $query->have_posts() ) : $query->the_post();
 						get_template_part( 'template-parts/content', 'speakers' );
 					endwhile;
@@ -74,15 +74,15 @@ get_header(); ?>
 
 	<div id="media-section">
 		<div class="row">
-			<div class="large-8 columns">
+			<div class="large-7 columns">
 				<h6 class="line">VIDEOS</h6>
 				<div class="flex-video">
 					<iframe src="https://www.youtube.com/embed/Mix-fIU1XUI" frameborder="0" allowfullscreen></iframe>
 				</div>
 			</div>
-			<div class="large-4 columns">
+			<div class="large-5 columns">
 				<h6 class="line">PHOTOS</h6>
-				<?php echo do_shortcode("[huge_it_portfolio id='1']"); ?>
+				<?php echo do_shortcode('[Best_Wordpress_Gallery id="1" gal_title="frontpage"]'); ?>
 			</div>
 		</div>
 	</div>
@@ -96,7 +96,6 @@ get_header(); ?>
 			<div class="large-4 columns">
 				<h6 class="line">TWEET UPDATES</h6>
 					<a class="twitter-timeline" href="https://twitter.com/DesignActionBDG" data-widget-id="650360437322739713">Tweets by @DesignActionBDG</a>
-					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 			</div>
 		</div>
 	</div>
@@ -106,8 +105,13 @@ get_header(); ?>
 			<h6 class="line">
 				SPONSOR
 			</h6>
-			<ul class="small-block-grid-5">
-			
+			<ul id="sponsor_list" class="small-block-grid-5">
+			<?php 
+					$query2 = new WP_Query('tag=sponsors&order=ASC');
+					while ( $query2->have_posts() ) : $query2->the_post();
+						get_template_part( 'template-parts/content', 'sponsors' );
+					endwhile;
+					// End of the loop. ?>
 			</ul>
 		</div>
 		<div class="large-6 columns">
@@ -115,7 +119,12 @@ get_header(); ?>
 			 	MEDIA PARTNERS
 			 </h6>
 			 <ul class="small-block-grid-5">
-			 
+			 	<?php 
+					$query3 = new WP_Query('tag=partners&order=ASC');
+					while ( $query3->have_posts() ) : $query3->the_post();
+						get_template_part( 'template-parts/content', 'partners' );
+					endwhile;
+					// End of the loop. ?>
 			</ul>
 		</div>
 	</div>
@@ -162,15 +171,21 @@ get_header(); ?>
 
 <?php wp_footer(); ?>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/vendor/foundation/js/foundation.min.js"></script>
-
 <script type="text/javascript" src="<?php echo get_template_directory_uri()?>/assets/vendor/holderjs/holder.min.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 <script type="text/javascript">
-	if(jQuery(".nivoSlider").length > 0){
-		jQuery(".nivoSlider").nivoSlider({
-			directionNav : false,
-			controlNav : false
+	jQuery(document).ready(function(){
+		jQuery.get("https://spreadsheets.google.com/feeds/list/1eaJf99RbkoxYpmozmxdFrBI2jBsN7-AOPCdNW87bTd4/od6/public/values?alt=json",function(){
+
+		}).done(function(data){
+			for (var i = 0;  i < data.feed.entry.length ; i++) {
+				jQuery('</li>', {
+					text: 'test'
+				}).appendTo("#sponsor_list");
+				
+			};
 		});
-	}
+	});
 </script>
 </body>
 </html>

@@ -17,7 +17,7 @@
 			<?php designaction_posted_on(); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
-
+	<?php the_post_thumbnail(); ?>
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php
