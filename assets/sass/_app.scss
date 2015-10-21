@@ -1,3 +1,12 @@
+body{
+	font-family: 'Work Sans', sans-serif;
+	h1, h2, h3, h4, h5, h6{
+		font-family: 'Work Sans', sans-serif;
+	}
+	p{
+		font-family: 'Work Sans', sans-serif;
+	}
+}
 .site-footer{
 	margin-top: 60px;
 	.row{
@@ -158,4 +167,12 @@ input[type=text].ninja-forms-field {
 	border:0;
 	border-bottom: 1px #333 solid;
 	box-shadow: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+	margin-bottom: 1em;
+}
+
+p{
+	margin-bottom: 40px;
 }

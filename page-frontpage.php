@@ -82,7 +82,6 @@ get_header(); ?>
 			</div>
 			<div class="large-5 columns">
 				<h6 class="line">PHOTOS</h6>
-				<?php echo do_shortcode('[Best_Wordpress_Gallery id="1" gal_title="frontpage"]'); ?>
 			</div>
 		</div>
 	</div>
