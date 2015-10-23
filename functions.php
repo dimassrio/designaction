@@ -285,7 +285,7 @@ function start_lvl( &$output, $depth = 0, $args = array() ) {
     $class_names = implode( ' ', $classes );
   
     // build html
-    $output .= "\n" . $indent . '<ul class="' . $class_names . '">' . "\n";
+    $output .= "\n" . $indent . '<ul class="' . $class_names . ' small-block-grid-5">' . "\n";
 }
   
 // add main/sub classes to li's and links

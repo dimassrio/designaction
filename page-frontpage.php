@@ -59,7 +59,7 @@ get_header(); ?>
 	<div id="speakers-section">
 		<div class="row">
 			<div class="large-12 columns">
-				<h6 class="line">SPEAKERS</h6>
+				<h5 class="line">SPEAKERS</h5>
 				<ul class="small-block-grid-4">
 					<?php 
 					$query = new WP_Query('tag=speakers&order=ASC');
@@ -75,13 +75,13 @@ get_header(); ?>
 	<div id="media-section">
 		<div class="row">
 			<div class="large-7 columns">
-				<h6 class="line">VIDEOS</h6>
+				<h5 class="line">VIDEOS</h5>
 				<div class="flex-video">
 					<iframe src="https://www.youtube.com/embed/Mix-fIU1XUI" frameborder="0" allowfullscreen></iframe>
 				</div>
 			</div>
 			<div class="large-5 columns">
-				<h6 class="line">PHOTOS</h6>
+				<h5 class="line">PHOTOS</h5>
 			</div>
 		</div>
 	</div>
@@ -89,7 +89,7 @@ get_header(); ?>
 	<div id="social-section">
 		<div class="row">
 			<div class="large-8 columns">
-				<h6 class="line">REGISTER NOW</h6>
+				<h5 class="line">REGISTER NOW</h5>
 				<!-- Change the width and height values to suit you best -->
 <!-- Change the width and height values to suit you best -->
 <div class="typeform-widget" data-url="https://dimassatrio1.typeform.com/to/L5J2sS" data-text="Registration Form" style="width:100%;height:500px;"></div>
@@ -106,9 +106,9 @@ get_header(); ?>
 
 	<div id="spons	or-section" class="row">
 		<div class="large-6 columns">
-			<h6 class="line">
+			<h5 class="line">
 				SPONSOR
-			</h6>
+			</h5>
 			<ul id="sponsor_list" class="small-block-grid-5">
 			<?php 
 					$query2 = new WP_Query('tag=sponsors&order=ASC');
@@ -119,9 +119,9 @@ get_header(); ?>
 			</ul>
 		</div>
 		<div class="large-6 columns">
-			 <h6 class="line">
+			 <h5 class="line">
 			 	MEDIA PARTNERS
-			 </h6>
+			 </h5>
 			 <ul class="small-block-grid-5">
 			 	<?php 
 					$query3 = new WP_Query('tag=partners&order=ASC');

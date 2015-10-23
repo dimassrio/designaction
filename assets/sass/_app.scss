@@ -39,6 +39,8 @@ body{
 
 
 .line{
+	padding-bottom: 5px;
+
 	border-bottom: 1px solid #333;	
 }
 
@@ -65,6 +67,9 @@ input.search-field{
 		color:#333;
 	}
 }
+.top-bar-section li:not(.has-form) a:not(.button){
+	padding: 0;
+}
 
 .top-bar-section{
 	ul{
@@ -75,6 +80,9 @@ input.search-field{
 				text-transform: uppercase;
 			}
 			.main-menu-link{
+				padding-left: 0;
+				padding-right:0;
+				min-width: 150px;
 				border-top: 1px #FFF solid;
 				border-left: 1px #FFF solid;
 				border-right: 1px #FFF solid;
@@ -85,6 +93,10 @@ input.search-field{
 			}
 			.main-menu-link:hover{
 				border: 1px #333 solid;
+			}
+			.menu-item{
+				margin:0;
+				background-color: #FFFFFF;
 			}
 		}
 	}
@@ -173,6 +185,22 @@ h1, h2, h3, h4, h5, h6{
 	margin-bottom: 1em;
 }
 
+h1, h2, h3, h5{
+	font-weight:700;
+}
+
 p{
 	margin-bottom: 40px;
+}
+
+.main-menu-item{
+
+}
+
+.menu-item{
+	margin:0;
+}
+
+.twitter-widget-0{
+	max-height:500px;
 }
