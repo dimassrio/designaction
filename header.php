@@ -54,8 +54,12 @@
 					<section class="top-bar-section">
 						<!-- Right Nav Section -->
 						<!-- Left Nav Section -->
-						<ul class="left">
-							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'walker'=> new da_walker ) ); ?>
+						<ul>
+							<?php $args = array( 
+								'theme_location' => 'primary',
+								'menu_class' => 'menu small-block-grid-5',
+								'walker'=> new da_walker );
+							wp_nav_menu($args); ?>
 						</ul>
 					</section>
 				</div>

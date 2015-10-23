@@ -283,7 +283,6 @@ function start_lvl( &$output, $depth = 0, $args = array() ) {
         'menu-depth-' . $display_depth
         );
     $class_names = implode( ' ', $classes );
-  
     // build html
     $output .= "\n" . $indent . '<ul class="' . $class_names . ' small-block-grid-5">' . "\n";
 }

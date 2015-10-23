@@ -108,7 +108,7 @@ input.search-field{
 	}
 }
 header{
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 }
 
 .top-header{
@@ -146,7 +146,7 @@ header{
 
 #main-slider{
 	border-top: 1px solid #333;
-	padding-top: 40px;
+	padding-top: 20px;
 	margin-bottom: 60px;
 }
 
@@ -196,9 +196,12 @@ p{
 .main-menu-item{
 
 }
-
+.top-bar-section ul li .menu-item{
+	padding: 0 10px;
+}
 .menu-item{
 	margin:0;
+	padding : 0 10px;
 }
 
 .twitter-widget-0{
