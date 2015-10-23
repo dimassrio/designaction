@@ -116,12 +116,15 @@ header{
 } 
 
 .button-slider-container{
+	h6{
+		margin-bottom:5px;
+	}
 	section{
 		display: block;
 		margin: 0;
 		height: 80px;
 		width: 100%;
-		padding: 20px;	
+		padding: 10px;	
 	}
 
 	section#section-pre-event{
