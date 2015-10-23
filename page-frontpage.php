@@ -126,7 +126,7 @@ get_header(); ?>
 			 	<?php 
 					$query3 = new WP_Query('tag=partners&order=ASC');
 					while ( $query3->have_posts() ) : $query3->the_post();
-						get_template_part( 'template-parts/content', 'partners' );
+						get_template_part( 'template-parts/content', 'sponsors' );
 					endwhile;
 					// End of the loop. ?>
 			</ul>
