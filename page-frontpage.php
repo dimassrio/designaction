@@ -76,9 +76,9 @@ get_header(); ?>
 		<div class="row">
 			<div class="large-7 columns">
 				<h5 class="line">VIDEOS</h5>
-				<div class="flex-video">
-					<iframe src="https://www.youtube.com/embed/Mix-fIU1XUI" frameborder="0" allowfullscreen></iframe>
-				</div>
+				
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/Mix-fIU1XUI" frameborder="0" allowfullscreen></iframe>
+				
 			</div>
 			<div class="large-5 columns">
 				<h5 class="line">PHOTOS</h5>
@@ -98,7 +98,7 @@ get_header(); ?>
 
 			</div>
 			<div class="large-4 columns">
-				<h6 class="line">TWEET UPDATES</h6>
+				<h5 class="line">TWEET UPDATES</h5>
 					<a class="twitter-timeline" href="https://twitter.com/DesignActionBDG" data-widget-id="650360437322739713">Tweets by @DesignActionBDG</a>
 			</div>
 		</div>
