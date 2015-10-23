@@ -119,20 +119,20 @@ header{
 	section{
 		display: block;
 		margin: 0;
-		height:100px;
-		width:100%;
-		padding:20px;	
+		height: 80px;
+		width: 100%;
+		padding: 20px;	
 	}
 
 	section#section-pre-event{
-		background-color: #EEEEA7;
+		background-color: #D2D800;
 		h6.line{
 			border-bottom:1px solid #FFF;
 		}
 	}
 
 	section#section-main-event{
-		background-color: #000;
+		background-color: #D2D800;
 		h6{
 			color:#FFF;
 		}
@@ -197,7 +197,7 @@ p{
 
 }
 .top-bar-section ul li .menu-item{
-	border-left: none:
+	border-left: none;
 	border-right: none;
 }
 .menu-item{
