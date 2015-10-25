@@ -44,7 +44,7 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="contain-to-grid">
 			<nav class="top-bar" data-topbar data-options="is_hover: true" role="navigation">
-			<div class="row">
+			<div class="row collapse">
 				<div class="large-12 columns">
 					<ul class="title-area">
 						<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
@@ -54,13 +54,11 @@
 					<section class="top-bar-section">
 						<!-- Right Nav Section -->
 						<!-- Left Nav Section -->
-						<ul>
 							<?php $args = array( 
 								'theme_location' => 'primary',
 								'menu_class' => 'menu small-block-grid-5',
 								'walker'=> new da_walker );
 							wp_nav_menu($args); ?>
-						</ul>
 					</section>
 				</div>
 			</div>

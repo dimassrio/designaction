@@ -10,10 +10,10 @@
 get_header(); ?>
 
 <div id="main-slider" class="row collapse">
-	<div class="large-6 columns">
+	<div class="large-7 columns">
 		<?php if ( function_exists( 'soliloquy' ) ) { soliloquy( 'frontpage', 'slug' ); } ?>
 	</div>
-	<div class="large-6 columns">
+	<div class="large-5 columns">
 		<div class="button-slider-container">
 			<section id="section-pre-event">
 				<h6 class="line">PRE-EVENT <span class="right"><i class="fa fa-calendar-o"></i></span></h6>
