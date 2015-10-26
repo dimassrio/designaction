@@ -82,6 +82,7 @@ get_header(); ?>
 			</div>
 			<div class="large-5 columns">
 				<h5 class="line">PHOTOS</h5>
+				<?php echo do_shortcode("[foogallery id=\"127\"]"); ?>
 			</div>
 		</div>
 	</div>
