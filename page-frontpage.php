@@ -105,7 +105,7 @@ get_header(); ?>
 		</div>
 	</div>
 
-	<div id="spons	or-section" class="row">
+	<div id="sponsor-section" class="row">
 		<div class="large-6 columns">
 			<h5 class="line">
 				SPONSOR
@@ -121,7 +121,7 @@ get_header(); ?>
 		</div>
 		<div class="large-6 columns">
 			 <h5 class="line">
-			 	MEDIA PARTNERS
+				PARTNERS
 			 </h5>
 			 <ul class="small-block-grid-5">
 			 	<?php 
