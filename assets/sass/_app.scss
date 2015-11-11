@@ -137,9 +137,14 @@ header{
 .top-header{
 	margin:50px 0;
 } 
-
-#sponsor-section, #social-section, #media-section{
+#sponsor-section{
+	margin-top:55px;
+}
+#media-section{
 	margin-top:20px;
+}
+#social-section{
+	margin-top:40px;
 }
 .button-slider-container{
 	h6{
@@ -186,9 +191,6 @@ header{
 	}
 }
 
-#sponsor-section{
-	margin-top: 60px;
-}
 .vcard{
 	border: 0;
 }

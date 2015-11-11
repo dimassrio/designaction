@@ -31,10 +31,10 @@
 				<?php get_search_form(); ?>
 				<div class="social-media">
 					<ul class="inline-list right">
-					<li><a href=""><i class="fa fa-facebook"></i></a></li>
-					<li><a href=""><i class="fa fa-twitter"></i></a></li>
-					<li><a href=""><i class="fa fa-google-plus"></i></a></li>
-					<li><a href=""><i class="fa fa-youtube"></i></a></li>
+					<li><a href="https://www.facebook.com/designaction.bdg/"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="https://twitter.com/DesignActionBDG"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="https://plus.google.com/106982451271131413866/videos"><i class="fa fa-google-plus"></i></a></li>
+					<li><a href="https://www.youtube.com/channel/UC9g7IG4QOlNkP0HJaSKyjsw/feed"><i class="fa fa-youtube"></i></a></li>
 					<li><a href=""><i class="fa fa-instagram"></i></a></li>
 				</ul>
 				</div>
