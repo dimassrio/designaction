@@ -16,16 +16,16 @@ get_header(); ?>
 	<div class="large-5 columns">
 		<div class="button-slider-container">
 			<section id="section-pre-event">
-				<h6 class="line">PRE-EVENT <span class="right"><i class="fa fa-calendar-o"></i></span></h6>
-				<p>View Pre-Event Schedule</p>
+				<h6 class="line">PRE-EVENTS<span class="right"><i class="fa fa-calendar-o"></i></span></h6>
+				<a href="http://designaction.bccf-bdg.org/pre-event/">View Pre-Event Schedule</a>
 			</section>
 			<section id="section-main-event">
 				<h6 class="line">MAIN EVENT <span class="right"><i class="fa fa-calendar-o"></i></span></h6>
-				<p>View Event Schedule</p>
+				<a href="http://designaction.bccf-bdg.org/designaction-bdg-2015/event/">View Event Schedule</a>
 			</section>
 			<section id="section-speakers">
 				<h6 class="line">SPEAKERS <span class="right"><i class="fa fa-microphone"></i></span></h6>
-				<p>View Speakers List</p>
+				<a href="http://designaction.bccf-bdg.org/designaction-bdg-2015/speakers/">View Speakers List</a>
 			</section>
 		</div>
 	</div>
