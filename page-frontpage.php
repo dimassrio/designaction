@@ -106,35 +106,16 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
+	<?php
 
-	<div id="sponsor-section" class="row">
-		<div class="large-6 columns">
-			<h5 class="line">
-				SPONSOR
-			</h5>
-			<ul id="sponsor_list" class="small-block-grid-5">
-			<?php 
-					$query2 = new WP_Query('tag=sponsors&order=ASC');
-					while ( $query2->have_posts() ) : $query2->the_post();
-						get_template_part( 'template-parts/content', 'sponsors' );
-					endwhile;
-					// End of the loop. ?>
-			</ul>
-		</div>
-		<div class="large-6 columns">
-			 <h5 class="line">
-				PARTNERS
-			 </h5>
-			 <ul class="small-block-grid-5">
-			 	<?php 
-					$query3 = new WP_Query('tag=partners&order=ASC');
-					while ( $query3->have_posts() ) : $query3->the_post();
-						get_template_part( 'template-parts/content', 'sponsors' );
-					endwhile;
-					// End of the loop. ?>
-			</ul>
-		</div>
-	</div>
+							/*
+							 * Include the Post-Format-specific template for the content.
+							 * If you want to override this in a child theme, then include a file
+							 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+							 */
+							get_template_part( 'template-parts/sponsors', get_post_format() );
+						?>
+
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="row">
 			<div class="large-3 columns">
