@@ -16,7 +16,7 @@
 			<h5 class="line">
 				SUPPORTED BY
 			</h5>
-			<ul id="sponsor_list" class="small-block-grid-5">
+			<ul id="sponsor_list" class="small-block-grid-3">
 			<?php 
 					$query2 = new WP_Query('tag=support&order=ASC');
 					while ( $query2->have_posts() ) : $query2->the_post();
