@@ -60,7 +60,7 @@ get_header(); ?>
 		<div class="row">
 			<div class="large-12 columns">
 				<h5 class="line">SPEAKERS</h5>
-				<ul class="small-block-grid-4">
+				<ul class="small-block-grid-5">
 					<?php 
 					$query = new WP_Query('tag=speakers&order=ASC');
 					while ( $query->have_posts() ) : $query->the_post();
