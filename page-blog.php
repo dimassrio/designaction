@@ -14,7 +14,7 @@ get_header(); ?>
 			<div class="row">
 				<div class="large-12 columns">
 				<?php $args = array(
-					'tag__not_in' => array('speakers', 'partners', 'sponsors', 'speaker', 'partner', 'sponsor', 'support', 'supports')
+					'tag__not_in' => array(4,5,6,7,13,14,15)
 				); ?>
 				<?php query_posts($args) ?>
 				<?php if ( have_posts() ) : ?>
