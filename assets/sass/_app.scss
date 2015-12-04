@@ -7,6 +7,9 @@ body{
 		font-family: 'Work Sans', sans-serif;
 	}
 }
+.site-content{
+	margin-top: 60px;
+}
 .site-footer{
 	margin-top: 60px;
 	.row{
@@ -131,7 +134,6 @@ input.search-field{
 	}
 }
 header{
-	margin-bottom: 60px;
 }
 
 .top-header{
@@ -236,4 +238,9 @@ p{
 
 .twitter-widget-0{
 	max-height:500px;
+}
+@media screen and (max-width: 782px){
+	html {
+    margin-top: 0px !important;
+}
 }

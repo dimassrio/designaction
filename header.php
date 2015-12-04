@@ -24,46 +24,45 @@
 <div id="page" class="hfeed site">
 	<div class="top-header">
 		<div class="row">
-		<div class="large-8 columns">
-			<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri();?>/assets/img/logo.png" data-src="holder.js/500x100" alt=""></a>
-		</div>
-		<div class="large-4 columns">
-				<?php get_search_form(); ?>
-				<div class="social-media">
-					<ul class="inline-list right">
-					<li><a href="https://www.facebook.com/designaction.bdg/"><i class="fa fa-facebook"></i></a></li>
-					<li><a href="https://twitter.com/DesignActionBDG"><i class="fa fa-twitter"></i></a></li>
-					<li><a href="https://plus.google.com/106982451271131413866/videos"><i class="fa fa-google-plus"></i></a></li>
-					<li><a href="https://www.youtube.com/channel/UC9g7IG4QOlNkP0HJaSKyjsw/feed"><i class="fa fa-youtube"></i></a></li>
-					<li><a href=""><i class="fa fa-instagram"></i></a></li>
-				</ul>
-				</div>
-		</div>
-	</div>
-	</div>
-	<header id="masthead" class="site-header" role="banner">
-		<div class="contain-to-grid">
-			<nav class="top-bar" data-topbar data-options="is_hover: true" role="navigation">
-			<div class="row collapse">
-				<div class="large-12 columns">
-					<ul class="title-area">
-						<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-						<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+			<div class="large-8 columns">
+				<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri();?>/assets/img/logo.png" data-src="holder.js/500x100" alt=""></a>
+			</div>
+			<div class="large-4 columns">
+					<?php get_search_form(); ?>
+					<div class="social-media">
+						<ul class="inline-list right">
+						<li><a href="https://www.facebook.com/designaction.bdg/"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="https://twitter.com/DesignActionBDG"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="https://plus.google.com/106982451271131413866/videos"><i class="fa fa-google-plus"></i></a></li>
+						<li><a href="https://www.youtube.com/channel/UC9g7IG4QOlNkP0HJaSKyjsw/feed"><i class="fa fa-youtube"></i></a></li>
+						<li><a href=""><i class="fa fa-instagram"></i></a></li>
 					</ul>
+					</div>
+			</div>
+		</div>
+	</div>
+	<div class="header">
+		<div class="contain-to-grid">
+			<nav class="top-bar" data-topbar role="navigation">
+		<ul class="title-area">
+			<li class="name hide-for-medium-up">
+				<h1>Navigation</h1>
+			</li>
+			 <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+			<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+		</ul>
 
-					<section class="top-bar-section">
-						<!-- Right Nav Section -->
-						<!-- Left Nav Section -->
-							<?php $args = array( 
+		<section class="top-bar-section">
+			<!-- Right Nav Section -->
+			<?php $args = array( 
 								'theme_location' => 'primary',
-								'menu_class' => 'menu small-block-grid-5',
+								'menu_class' => 'menu large-block-grid-5 small-block-grid-1 medium-block-grid-3',
 								'walker'=> new da_walker );
 							wp_nav_menu($args); ?>
-					</section>
-				</div>
-			</div>
-		</nav>	
+		</section>
+	</nav>
 		</div>
-	</header>
+	</div>
+	
 	
 	<div id="content" class="site-content">

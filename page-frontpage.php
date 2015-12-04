@@ -174,6 +174,7 @@ get_header(); ?>
 			};
 		});
 	});
+	jQuery(document).foundation();
 </script>
 </body>
 </html>
