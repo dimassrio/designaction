@@ -19,7 +19,13 @@
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-
+	<div class="entry-image">
+		<?php 
+		if ( has_post_thumbnail() ) {
+			the_post_thumbnail();
+		}
+		?>
+	</div>
 	<div class="entry-content">
 		<?php
 			the_content( sprintf(
