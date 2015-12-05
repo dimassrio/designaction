@@ -8,13 +8,17 @@
  */
 
 get_header(); ?>
-
+<?php while ( have_posts() ) : the_post(); ?>
+	<div class="section full-image">
+		<div class="large-12">
+				<?php the_post_thumbnail(); ?>
+		</div>
+	</div>
 	<div class="row">
-		<div class="large-8 columns medium-8">
+		<div class="large-8 large-offset-2 medium-offset-2 columns medium-8">
 			<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+				<main id="main" class="site-main" role="main">
 
-		<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php get_template_part( 'template-parts/content', 'single' ); ?>
 
@@ -32,10 +36,6 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-		</div>
-		<div class="large-4 columns medium-4">
-<?php get_sidebar(); ?>
-			
 		</div>
 	</div>
 <?php get_footer(); ?>

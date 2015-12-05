@@ -336,3 +336,8 @@ function start_lvl( &$output, $depth = 0, $args = array() ) {
     $output .= apply_filters( 'da_walker_start_el', $item_output, $item, $depth, $args );
 }
 }
+
+function new_excerpt_more( $more ) {
+	return '<br/> <a class="read-more button tiny right" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Read More', 'your-text-domain' ) . ' <i class="fa fa-angle-double-right"></i></a>';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more' );

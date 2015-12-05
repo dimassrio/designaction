@@ -162,18 +162,6 @@ get_header(); ?>
 <script type="text/javascript" src="<?php echo get_template_directory_uri()?>/assets/vendor/holderjs/holder.min.js"></script>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 <script type="text/javascript">
-	jQuery(document).ready(function(){
-		jQuery.get("https://spreadsheets.google.com/feeds/list/1eaJf99RbkoxYpmozmxdFrBI2jBsN7-AOPCdNW87bTd4/od6/public/values?alt=json",function(){
-
-		}).done(function(data){
-			for (var i = 0;  i < data.feed.entry.length ; i++) {
-				jQuery('</li>', {
-					text: 'test'
-				}).appendTo("#sponsor_list");
-				
-			};
-		});
-	});
 	jQuery(document).foundation();
 </script>
 <script type="text/javascript">

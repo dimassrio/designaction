@@ -67,12 +67,6 @@
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/vendor/foundation/js/foundation.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/vendor/holderjs/holder.min.js"></script>
 <script type="text/javascript">
-	if(jQuery(".nivoSlider").length > 0){
-		jQuery(".nivoSlider").nivoSlider({
-			directionNav : false,
-			controlNav : false
-		});
-	}
 	jQuery(document).foundation();
 </script>
 <script type="text/javascript">
