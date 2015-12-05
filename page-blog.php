@@ -12,7 +12,7 @@ get_header(); ?>
 <div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<div class="row">
-				<div class="large-12 columns">
+				<div class="large-8 large-offset-2 columns">
 				<?php 
 				$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 				$args = array(
