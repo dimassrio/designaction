@@ -23,7 +23,6 @@ gulp.task('serve', ['sass'], function() {
     });
 
     gulp.watch("assets/sass/*.scss", ['sass']);
-    gulp.watch("*").on('change', browserSync.reload);
 });
 
 gulp.task('default', ['serve']);

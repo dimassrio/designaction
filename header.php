@@ -43,7 +43,7 @@
 	</div>
 	<div class="header">
 		<div class="contain-to-grid">
-			<nav class="top-bar" data-topbar role="navigation">
+			<nav class="top-bar" data-topbar role="navigation" data-options="mobile_show_parent_link: true">
 		<ul class="title-area">
 			<li class="name hide-for-medium-up">
 				<h1>Navigation</h1>

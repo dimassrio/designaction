@@ -120,3 +120,14 @@ function designaction_category_transient_flusher() {
 }
 add_action( 'edit_category', 'designaction_category_transient_flusher' );
 add_action( 'save_post',     'designaction_category_transient_flusher' );
+
+function designaction_get_cover($id){
+	$img = get_children( array('post_parent'=>$id,'post_type'=>'attachment','numberposts' => 1));
+	$image = '';
+	if(sizeof($img) == 1){
+		$obj = reset($img);
+		$image = '<img src="'.$obj->guid.'" class="attachment-post-thumbnail wp-post-image"/>';
+	}
+
+	return $image;
+}

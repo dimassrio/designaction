@@ -11,8 +11,12 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
+		<?php if(has_post_thumbnail()):?>
+			<?php the_title( '<h1 class="entry-title da-title">', '</h1>' ); ?>
+		<?php else : ?>
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php endif; ?>
+		
 		<div class="entry-meta">
 			<?php designaction_posted_on(); ?>
 		</div><!-- .entry-meta -->
