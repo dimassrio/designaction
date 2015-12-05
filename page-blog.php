@@ -13,9 +13,13 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<div class="row">
 				<div class="large-12 columns">
-				<?php $args = array(
-					'tag__not_in' => array(4,5,6,7,13,14,15)
-				); ?>
+				<?php 
+				$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+				$args = array(
+					'tag__not_in' => array(4,5,6,7,13,14,15),
+					'paged' => $paged
+				); 
+				?>
 				<?php query_posts($args) ?>
 				<?php if ( have_posts() ) : ?>
 
@@ -41,6 +45,7 @@ get_header(); ?>
 					<?php endwhile; ?>
 
 					<?php the_posts_navigation(); ?>
+					<?php wp_reset_postdata(); ?>
 
 				<?php else : ?>
 
